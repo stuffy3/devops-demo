@@ -28,7 +28,7 @@ app.get("/api/students", (req, res) => {
     rollbar.info("someone got the list of students on page load")
 });
 
-app.post("api/students", (req, res)=> {
+app.post("/api/students", (req, res)=> {
     let {name} =req.body
     name = name.trim(); //get rid of white space
     const index = students.findIndex((studentName) => studentName === name);//find the index of the name, cycle through entire array, if name is in array  gives name else return -1
